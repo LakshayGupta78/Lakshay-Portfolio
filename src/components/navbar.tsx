@@ -31,31 +31,35 @@ export function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 px-8 py-6 transition-all duration-300 ${isScrolled ? "bg-black/90 backdrop-blur-md border-b border-white/5 shadow-lg" : "bg-transparent mix-blend-difference"
-                }`}
+            className={`fixed top-0 left-0 w-full z-50 px-8 py-6 transition-all duration-300 
+                bg-black/90 backdrop-blur-md 
+                ${isScrolled ? "border-b border-white/5 shadow-lg" : ""} 
+                md:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none
+                ${isScrolled ? "md:bg-black/90 md:backdrop-blur-md md:border-b md:border-white/5 md:shadow-lg" : "md:mix-blend-difference"}
+            `}
         >
             <div className="flex justify-between items-center">
                 <div className="text-white text-sm font-medium tracking-widest uppercase opacity-70 hover:opacity-100 transition-opacity cursor-default">
                     Lakshay Gupta
                 </div>
 
-                {/* Hamburger */}
+                {/* Hamburger - Always opaque */}
                 <button
-                    className="md:hidden flex flex-col justify-around w-[30px] h-6 bg-transparent border-none cursor-pointer z-[1001]"
+                    className="md:hidden flex flex-col justify-around w-10 h-10 bg-black/80 backdrop-blur-sm rounded-lg border border-white/10 p-2 cursor-pointer z-[1001]"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle navigation"
                 >
-                    <span className={`w-full h-[2px] bg-white transition-all ${isOpen ? "rotate-45 translate-y-[10px]" : ""}`} />
+                    <span className={`w-full h-[2px] bg-white transition-all ${isOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
                     <span className={`w-full h-[2px] bg-white transition-all ${isOpen ? "opacity-0" : ""}`} />
-                    <span className={`w-full h-[2px] bg-white transition-all ${isOpen ? "-rotate-45 -translate-y-[10px]" : ""}`} />
+                    <span className={`w-full h-[2px] bg-white transition-all ${isOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
                 </button>
 
                 {/* Nav Links */}
                 <div className={`
-          md:flex md:gap-8 md:relative md:top-0 md:right-0 md:w-auto md:h-auto md:bg-transparent md:flex-row md:items-center md:justify-center md:p-0
-          fixed top-0 right-0 w-[70%] max-w-[300px] h-screen bg-black/95 backdrop-blur-2xl flex-col items-center justify-center gap-10 p-8 transition-all duration-300
-          ${isOpen ? "flex shadow-2xl border-l border-white/10" : "hidden md:flex"}
-        `}>
+                    md:flex md:gap-8 md:relative md:top-0 md:right-0 md:w-auto md:h-auto md:bg-transparent md:flex-row md:items-center md:justify-center md:p-0
+                    fixed top-0 right-0 w-[70%] max-w-[300px] h-screen bg-black flex-col items-center justify-center gap-10 p-8 transition-all duration-300 z-[1000]
+                    ${isOpen ? "flex shadow-2xl border-l border-white/10" : "hidden md:flex"}
+                `}>
                     <Link href="#home" onClick={(e) => handleNavClick(e, "home")} className="text-white/70 hover:text-white transition-colors text-sm font-medium tracking-wide">
                         Overview
                     </Link>
