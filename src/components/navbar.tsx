@@ -32,11 +32,12 @@ export function Navbar() {
     return (
         <nav
             className={`fixed top-0 left-0 w-full z-50 px-8 py-6 transition-all duration-300 
-                bg-black/90 backdrop-blur-md 
                 ${isScrolled ? "border-b border-white/5 shadow-lg" : ""} 
-                md:bg-transparent md:backdrop-blur-none md:border-none md:shadow-none
-                ${isScrolled ? "md:bg-black/90 md:backdrop-blur-md md:border-b md:border-white/5 md:shadow-lg" : "md:mix-blend-difference"}
+                ${!isScrolled ? "md:mix-blend-difference" : ""}
             `}
+            style={{
+                backgroundColor: isScrolled ? '#000000' : 'transparent'
+            }}
         >
             <div className="flex justify-between items-center">
                 <div className="text-white text-sm font-medium tracking-widest uppercase opacity-70 hover:opacity-100 transition-opacity cursor-default">

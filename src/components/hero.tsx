@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Chatbot } from "./chatbot";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -27,9 +28,10 @@ export function Hero() {
     };
 
     return (
-        <section id="home" className="min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto pt-[120px]">
+        <section id="home" className="min-h-screen flex flex-col lg:flex-row items-center justify-between gap-12 px-6 md:px-12 max-w-7xl mx-auto pt-[120px] pb-12">
+            {/* Left side - Hero content */}
             <motion.div
-                className="max-w-4xl"
+                className="flex-1 max-w-4xl lg:max-w-2xl"
                 variants={staggerContainer}
                 initial="hidden"
                 animate="visible"
@@ -42,7 +44,7 @@ export function Hero() {
                     Student Developer — Apple Ecosystem & AI
                 </motion.p>
                 <motion.h1
-                    className="text-[clamp(3rem,8vw,7rem)] font-semibold leading-[0.9] text-white tracking-tighter mb-10 mix-blend-difference"
+                    className="text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[0.9] text-white tracking-tighter mb-10 mix-blend-difference"
                     variants={fadeInUp}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
@@ -51,7 +53,7 @@ export function Hero() {
                 </motion.h1>
 
                 <motion.p
-                    className="text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed font-light mb-16"
+                    className="text-lg md:text-xl text-white/70 max-w-xl leading-relaxed font-light mb-12"
                     variants={fadeInUp}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
@@ -75,6 +77,16 @@ export function Hero() {
                         </span>
                     </div>
                 </motion.div>
+            </motion.div>
+
+            {/* Right side - Chatbot */}
+            <motion.div
+                className="w-full lg:w-auto"
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            >
+                <Chatbot />
             </motion.div>
         </section>
     );

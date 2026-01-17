@@ -7,8 +7,50 @@
   100% { background-position: 100% 50%; }
 }
 
+@keyframes rainbow {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
 .animate-gradient {
   animation: gradient-move 4s linear infinite;
+}
+
+.animate-rainbow {
+  animation: rainbow var(--speed, 2s) infinite linear;
+}
+
+/* Rainbow Button */
+.rainbow-btn {
+  background: #121213 !important;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.rainbow-btn::before {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 30px;
+  background: linear-gradient(
+    90deg,
+    hsl(0, 100%, 63%),
+    hsl(90, 100%, 63%),
+    hsl(210, 100%, 63%),
+    hsl(195, 100%, 63%),
+    hsl(270, 100%, 63%),
+    hsl(0, 100%, 63%)
+  );
+  background-size: 200% 100%;
+  animation: rainbow 2s linear infinite;
+  filter: blur(20px);
+  opacity: 0.9;
+  z-index: -1;
+  pointer-events: none;
 }
 
 @layer utilities {
@@ -21,6 +63,7 @@
 }
 body{
   background-color: black;
+  font-weight: 700;
 }
 @theme inline {
   --color-background: var(--background);
@@ -69,6 +112,13 @@ body{
   --radius: 0.625rem;
   --background: oklch(0 0 0);
   --foreground: oklch(0.985 0 0);
+  
+  /* Rainbow button colors */
+  --color-1: 0 100% 63%;
+  --color-2: 270 100% 63%;
+  --color-3: 210 100% 63%;
+  --color-4: 195 100% 63%;
+  --color-5: 90 100% 63%;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
