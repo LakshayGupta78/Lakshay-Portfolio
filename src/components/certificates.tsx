@@ -21,7 +21,7 @@ export function Certificates() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-white text-sm font-medium tracking-widest uppercase opacity-50">
-                        02 — Credentials
+                        01 — Credentials
                     </h2>
                 </motion.div>
 

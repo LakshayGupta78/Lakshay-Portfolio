@@ -101,7 +101,7 @@ export function Projects() {
             <div className="container-custom">
                 <div className="mb-32 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-start gap-8">
                     <h2 className="text-white text-sm font-medium tracking-widest uppercase opacity-50">
-                        05 — Selected Works
+                        04 — Selected Works
                     </h2>
                 </div>
 

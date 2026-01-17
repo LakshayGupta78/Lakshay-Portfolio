@@ -26,7 +26,7 @@ export function Skills() {
                     transition={{ duration: 0.6 }}
                 >
                     <h2 className="text-white text-sm font-medium tracking-widest uppercase opacity-50">
-                        01 — What I Do
+                        02 — What I Do
                     </h2>
                     <p className="max-w-xl text-2xl text-white/80 font-light leading-relaxed">
                         I&apos;m focused on transitioning from <span className="text-white font-normal">academic concepts</span> to <span className="text-white font-normal">real-world applications</span>.
