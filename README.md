@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# ✨ Lakshay's Portfolio
 
-First, run the development server:
+<p>
+  <img src="https://img.shields.io/badge/Next.js-16.1-black?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind-4.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Framer_Motion-12-FF0055?style=for-the-badge&logo=framer&logoColor=white" />
+</p>
+
+<p>
+  <a href="https://lakshay-portfolio-three.vercel.app">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_Site-blueviolet?style=for-the-badge" />
+  </a>
+</p>
+
+<p><i>A modern, animated portfolio showcasing my journey as a developer</i></p>
+
+</div>
+
+---
+
+## ✨ Features
+
+- 🤖 **AI Chatbot** — Interactive chatbot powered by AI to answer questions about me
+- 🎨 **Stunning Animations** — Smooth transitions and parallax effects with Framer Motion
+- 🌊 **WebGL Shader Background** — Dynamic, animated background using Three.js
+- 📱 **Fully Responsive** — Beautiful on all devices, from mobile to desktop
+- 🌙 **Dark Theme** — Sleek, modern dark aesthetic
+- ⚡ **Lightning Fast** — Optimized Next.js 16 with edge rendering
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| **Framework** | Next.js 16, React 19 |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS 4, CSS Modules |
+| **Animations** | Framer Motion, Three.js |
+| **UI Components** | Radix UI, Lucide Icons |
+| **Deployment** | Vercel |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/LakshayGupta78/Lakshay-Portfolio.git
+
+# Navigate to the project
+cd Lakshay-Portfolio
+
+# Install dependencies
+npm install
+
+# Create environment file
+cp .env.example .env.local
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── api/chat/     # AI Chatbot API route
+│   ├── layout.tsx    # Root layout
+│   └── page.tsx      # Home page
+├── components/
+│   ├── hero.tsx      # Hero section with intro
+│   ├── chatbot.tsx   # AI-powered chatbot
+│   ├── projects.tsx  # Projects showcase
+│   ├── skills.tsx    # Skills section
+│   ├── tools-marquee.tsx  # Tech stack marquee
+│   ├── certificates.tsx   # Certifications
+│   ├── contact.tsx   # Contact section
+│   └── navbar.tsx    # Navigation bar
+└── lib/
+    └── utils.ts      # Utility functions
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<div align="center">
+  <img src="https://lakshay-portfolio-three.vercel.app/og-image.png" alt="Portfolio Preview" width="700" />
+</div>
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by <a href="https://github.com/LakshayGupta78">Lakshay Gupta</a></p>
+</div>
